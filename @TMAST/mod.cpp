@@ -1,0 +1,9 @@
+name = "Traveler's Missionmakers Addon Signal Tool";
+author = "Talvald the Traveler";
+logo = "Logo.paa";
+logoOver = "LogoHighLight.paa";
+tooltip = "TMAST";
+picture	= "LogoHighLight.paa";
+actionName	= "Guide";
+action	= "https://linktr.ee/talvald";
+overview	= "A addon for mission makers who want some control over the GPS, Artillery Computer, and UAV Computer in the game";
