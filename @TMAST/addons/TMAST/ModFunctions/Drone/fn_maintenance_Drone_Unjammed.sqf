@@ -24,5 +24,5 @@ else
 };
 _uav setVariable ["TMAST_SignalTimeOut", nil];
 _uav setVariable [_variableCheck, nil];
-[_connectedUav, true] remoteExec ["enableUAVWaypoints", 0];
-[_connectedUav, true] remoteExec ["setAutonomous", 0];
+[_uav, true] remoteExec ["enableUAVWaypoints", 0];
+[_uav, true] remoteExec ["setAutonomous", 0];
