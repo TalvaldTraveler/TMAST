@@ -13,10 +13,10 @@ private _pathingAngle = _logic getVariable ["Angle", 67];
 private _laggingInformation = [_pathingDistance, _pathingAngle];
 
 private _target = switch (_sideSetting) do {
-    case "WEST": { west };
-    case "EAST": { east };
-    case "GUER": { independent };
-    case "CIV":  { civilian };
+    case "WEST": { allPlayers select { side _x isEqualTo west}};
+    case "EAST": { allPlayers select { side _x isEqualTo east}};
+    case "GUER": { allPlayers select { side _x isEqualTo independent}};
+    case "CIV":  { allPlayers select { side _x isEqualTo civilian}};
     case "CUSTOM": {call compile _customPlayers};
     default {allPlayers};
 };
