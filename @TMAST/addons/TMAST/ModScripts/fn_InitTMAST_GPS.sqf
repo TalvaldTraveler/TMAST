@@ -28,14 +28,14 @@ TMAST_MapEvent = addMissionEventHandler ["Map", {
 			TMAST_MapGPSEvent = addMissionEventHandler ["Draw2D", { 
 				switch (true) do
 				{
-					case (player getVariable ["NGUW_GPSunderWater", false]): {[] call TMAST_fnc_blockedGpsPos_ACE};
+					case (player getVariable ["TMAST_GPSunderWater", false]): {[] call TMAST_fnc_blockedGpsPos_ACE};
 					case (player getVariable ["TMAST_GPSjammed", false]): {[] call TMAST_fnc_blockedGpsPos_ACE};
-					case ((player getVariable "TMAST_GPSshadow") isEqualTo "Blocked"): {[_map] call TMAST_fnc_blockedGpsPos_ACE};
-					case ((player getVariable "TMAST_GPSscintillation") isEqualTo "Blocked"): {[_map] call TMAST_fnc_blockedGpsPos_ACE};
-					case ((player getVariable "TMAST_GPSmultipath") isEqualTo "Multipathing"): {[_map] call TMAST_fnc_laggingGpsPos_ACESW};
-					case ((player getVariable "TMAST_GPSscintillation") isEqualTo "Multipathing"): {[_map] call TMAST_fnc_laggingGpsPos_ACESN};
-					case ((player getVariable "TMAST_GPShacked") isEqualTo "TargSpoofing"): {[_map] call TMAST_fnc_hackedGpsPos_ACE};
-					case ((player getVariable "TMAST_GPShacked") isEqualTo "LocSpoofing"): {[_map] call TMAST_fnc_shiftedGpsPos_ACE};
+					case ((player getVariable "TMAST_GPSshadow") isEqualTo "Blocked"): {[] call TMAST_fnc_blockedGpsPos_ACE};
+					case ((player getVariable "TMAST_GPSscintillation") isEqualTo "Blocked"): {[] call TMAST_fnc_blockedGpsPos_ACE};
+					case ((player getVariable "TMAST_GPSshadow") isEqualTo "Multipathing"): {[] call TMAST_fnc_laggingGpsPos_ACESW};
+					case ((player getVariable "TMAST_GPSscintillation") isEqualTo "Multipathing"): {[] call TMAST_fnc_laggingGpsPos_ACESN};
+					case ((player getVariable "TMAST_GPShacked") isEqualTo "TargSpoofing"): {[] call TMAST_fnc_hackedGpsPos_ACE};
+					case ((player getVariable "TMAST_GPShacked") isEqualTo "LocSpoofing"): {[] call TMAST_fnc_shiftedGpsPos_ACE};
 					default {};
 				};
 			}]; 
