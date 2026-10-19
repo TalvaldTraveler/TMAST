@@ -18,5 +18,5 @@ _uavCrew = crew _uav;
 {
 	[_x, true] remoteExec ["TMAST_fnc_setJammedUAV_AI", 0]; 
 } forEach _uavCrew;
-[_connectedUav, false] remoteExec ["enableUAVWaypoints", 0];
-[_connectedUav, false] remoteExec ["setAutonomous", 0];
+[_uav, false] remoteExec ["enableUAVWaypoints", 0];
+[_uav, false] remoteExec ["setAutonomous", 0];
