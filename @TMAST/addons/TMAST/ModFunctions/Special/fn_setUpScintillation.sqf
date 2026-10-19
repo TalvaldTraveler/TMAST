@@ -34,5 +34,5 @@ missionNamespace setVariable ["TMAST_ScintillationEnabled", true];
 		};
 	}, 
 	1,
-	[_timeEffect, _lagWeight, _blockWeigth. _normWeigth, _target]
+	[_timeEffect, _lagWeight, _blockWeigth, _normWeigth, _target]
 ] call CBA_fnc_addPerFrameHandler;
