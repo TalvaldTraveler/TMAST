@@ -39,12 +39,17 @@ class CfgFunctions
 			{
 				postInit = 1;
 			};
+			class InitPreLoaded
+			{
+				preInit = 1;
+			};
 		};
 		class ModFunctions
 		{
 			file = "TMAST\ModFunctions";
 			class clearGpsEH;
 			class setGpsEH;
+			class setGpsAirEH;
 			class setAvEH;
 			class setAcEH;
 			class setPlayerIcon;
@@ -244,6 +249,9 @@ class CfgScriptPaths
 class Extended_DisplayLoad_EventHandlers {
     class RscCustomInfoMiniMap {
        TMAST_GpsEH_Load = "_this call TMAST_fnc_setGpsEH";
+    };
+    class RscCustomInfoAirborneMiniMap {
+       TMAST_GpsAirEH_Load = "_this call TMAST_fnc_setGpsAirEH";
     };
 	class RscDisplayArtillery
 	{
