@@ -11,7 +11,7 @@ params ["_marker", "_laggingInformation", "_altitude"];
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 		
-		if (player getVariable ["TMAST_InSignalShadow", false]) 
+		if (!(player getVariable ["TMAST_InSignalShadow", false])) 
 		then {
            if (player inArea _mrkName)
 		   then {
